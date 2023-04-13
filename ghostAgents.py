@@ -51,7 +51,7 @@ class RandomGhost(GhostAgent):
 class DirectionalGhost(GhostAgent):
     "A ghost that prefers to rush Pacman, or flee when scared."
 
-    def __init__(self, index, prob_attack=0.8, prob_scaredFlee=0.8):
+    def __init__(self, index, prob_attack=0.6, prob_scaredFlee=0.6):
         self.index = index
         self.prob_attack = prob_attack
         self.prob_scaredFlee = prob_scaredFlee

@@ -665,7 +665,7 @@ def replayGame(layout, actions, display):
     import pacmanAgents
     import ghostAgents
     rules = ClassicGameRules()
-    agents = [pacmanAgents.GreedyAgent()] + [ghostAgents.RandomGhost(i + 1)
+    agents = [pacmanAgents.GreedyAgent()] + [ghostAgents.RandomGhost(i + 1, 0.1)
                                              for i in range(layout.getNumGhosts())]
     game = rules.newGame(layout, agents[0], agents[1:], display)
     state = game.state

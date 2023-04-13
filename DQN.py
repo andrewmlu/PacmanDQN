@@ -3,7 +3,8 @@
 # https://github.com/mrkulk/deepQN_tensorflow
 
 import numpy as np
-import tensorflow as tf
+import tensorflow.compat.v1 as tf  # debug: modified from v2 to compat.v1 to be compatible on errors
+tf.disable_v2_behavior()
 
 class DQN:
     def __init__(self, params):
