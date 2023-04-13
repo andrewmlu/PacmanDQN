@@ -27,9 +27,9 @@ from DQN import *
 
 params = {
     # Model backups
-    'load_file': None,
-    'save_file': None,
-    'save_interval' : 10000, 
+    'load_file': None,  # format ./saved/filename (no extension)
+    'save_file': None, # format just name
+    'save_interval' : 30000,
 
     # Training parameters
     'train_start': 5000,    # Episodes before training starts
@@ -136,6 +136,7 @@ class PacmanDQN(game.Agent):
             return Directions.WEST
             
     def observation_step(self, state):
+        # print("hi")
         if self.last_action is not None:
             # Process current experience state
             self.last_state = np.copy(self.current_state)
