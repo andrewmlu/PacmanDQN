@@ -27,13 +27,15 @@ from DQN import *
 
 params = {
     # Model backups
-    'load_file': None,  # format ./saved/filename (no extension)
-    'save_file': None, # format just name
+    # 'load_file': './saves/model-train_mediumClassic_directional_230414_1722_14607_541', # format ./saves/filename (no extension)
+    'load_file': None,
+    # 'save_file': 'train_smallClassic_directional_7500_2304013_1556', # format just name, e.g., train_smallClassic_directional_7500_2304013_1556
+    'save_file': None,
     'save_interval' : 30000,
 
     # Training parameters
     'train_start': 5000,    # Episodes before training starts
-    'batch_size': 32,       # Replay memory batch size
+    'batch_size': 128,       # Replay memory batch size
     'mem_size': 100000,     # Replay memory size
 
     'discount': 0.95,       # Discount rate (gamma value)
