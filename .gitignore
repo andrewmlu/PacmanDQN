@@ -56,6 +56,6 @@ ENV/
 # pycharm
 .idea
 
-logs
+logs/*
 .DS_Store
 saves
